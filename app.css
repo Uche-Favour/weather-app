@@ -1,0 +1,212 @@
+/* 
+
+---------- TYPOGRAPHY ----------
+
+FONT SIZES
+12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+
+FONT WEIGHTS
+400 / 700
+
+LINE HEIGHTS
+1.2 / 1.5
+
+LETTER SPACING
+0 / -2px
+
+FONT FAMILY
+Bangers
+Montserrat
+
+---------- COLORS ----------
+
+PRIMARY
+Base: ##beffda (Aero Blue)
+Shade: ##9ae6c6 (Light Teal)
+
+SECONDARY
+Base: #linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%)) (Dream)
+
+
+GREY
+White: #F8FAFC (Off-White)
+Black: #hsl(0, 0%, 0%, 0.75) (glass charcoal)
+
+---------- BORDER RADIUS ----------
+
+4px / 8px / 20px
+
+---------- SPACING SYSTEM ----------
+5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px / 300px / 400px / 500px
+
+*/
+
+/* -------------------- GLOBAL STYLES -------------------- */
+
+:root{
+    --text-sm: 1.2rem;
+    --text-base: 1.6rem;
+    --text-paragraph: 2rem;
+    --text-h5: 2.4rem;
+    --text-h4: 3.2rem;
+    --text-h3: 4rem;
+    --text-h2: 4.8rem;
+    --text-h1: 6.2rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* LINE HEIGHT */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+
+    /* LETTER SPACING */
+    --letter-spacing-tight: -2px;
+
+    /* FONT FAMILY */
+    --title-font-family: "Bangers", system-ui;
+    --body-font-family: "Montserrat", sans-serif;
+
+    /* COLOUR */
+    
+    --primary-base: #beffda;
+    --primary-shade: #9ae6c6;
+
+    --secondary-base: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+
+    --white: #F8FAFC;
+    --black: hsl(0, 0%, 0%, 0.75);;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62%;
+}
+
+body{
+    font-family: var(--body-font-family);
+    font-weight: bold;
+    line-height: var(--line-height-normal);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#main-container{
+    width: 90%;
+    background: var(--secondary-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem hsl(0, 0%, 0.5%);
+    border-radius: 0.8rem;
+}
+
+h1{
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    
+}
+
+
+p{
+    font-size: var(--text-paragraph);
+    font-weight: var(--font-weight-normal);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.cityInput{
+    font-family: var(--body-font-family);
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid hsla(0, 0%, 20%, 0.3);
+    border-radius: 1rem;
+    min-width: 30rem;
+    
+}
+
+.weatherForm{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+button[type="submit"]{
+    font-family: var(--body-font-family);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--black);
+    background-color: var(--primary-base);
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
+    
+}
+
+
+
+/* -------------------- COMPONENTS-------------------- */
+.submitButton:hover{
+    transform: scale(1.1);
+    background-color: var(--primary-shade);
+    cursor: pointer;
+}
+.submitButton:active{
+    color: var(--white);
+}
+
+/* -------------------- SECTIONS -------------------- */
+
+
+.cityDisplay, .tempDisplay{
+    color: var(--black);
+    font-weight: bold;
+
+}
+
+.humidityDisplay{
+    font-weight:bold;
+    margin-bottom: 2.5rem; 
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+}
+
+.errorDisplay{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+
+
+
+
+

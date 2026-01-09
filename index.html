@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="app.css">
+    <title>weather app</title>
+</head>
+<body>
+    <div id="main-container">
+        <form class="weatherForm">
+            <input type="text" class="cityInput" placeholder="Enter City">
+            <button type="submit"  class="submitButton">Get Weather</button>
+        </form>
+
+        <!-- We don't want to dsiplay the card at all until we get the data (until user gets weather of a city) -->
+         <!-- So we make card display => style="display: none" -->
+
+        <div class="card" style="display: none;"> 
+            <h1 class="cityDisplay">Miami</h1>
+            <p class="tempDisplay">90° F</p>
+            <p class="humidityDisplay">Humidity: </p>
+            <p class="descDisplay">Clear Skies</p>
+            <p class="weatherEmoji">☀️</p>
+            <p class="errorDisplay">Please enter a city</p>
+
+        </div>
+        
+
+        
+    </div>
+    
+        
+
+    <script src="index.js"></script>
+</body>
+</html>
